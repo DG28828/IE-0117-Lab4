@@ -60,7 +60,7 @@ int array_element_delete(int *array, int element);  //Pregunta int *array o arra
  *@retval -1 Error: `array == NULL`
  *@retval -2 Error: índice no válido o fuera del rango del array.
  */
-int array_element_get(int *array, int indice);  //Pregunta int *array o array*
+int array_element_get(int *array, int size, int indice);  //Pregunta int *array o array*
 
 /**
  *@brief 

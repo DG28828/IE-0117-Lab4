@@ -10,3 +10,23 @@ int *array_create(int size) {
     }
     return array;
 }
+
+//int array_element_add(int *array, int element);
+
+//int array_element_delete(int *array, int element);
+
+int array_element_get(int *array, int size, int indice) {
+    if (array == NULL) {
+	printf("Error: puntero del arreglo es NULL \n");
+	return -1;
+    }
+    if (indice<0 || indice>(size-1)) {
+	printf("Error: indice no válido dentro del rango del arreglo \n");
+	return -1;
+    }
+    int * ptr_indice = array + indice;
+    int valor = *ptr_indice;
+    return valor;
+}
+
+//void array_print(int *array);

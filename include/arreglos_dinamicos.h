@@ -44,12 +44,11 @@ int array_element_add(int *array, int size, int element);  //Pregunta int *array
  *
  *@param array Puntero del array.
  *@param size Tamaño del arreglo
- *@param element Elemento a eliminar (int)
   *
  *@retval 0 Operación exitosa.
  *@retval -1 Error: `array == NULL`
  */
-int array_element_delete(int *array, int size, int element);  //Pregunta int *array o array*
+int array_element_delete(int *array, int size);  //Pregunta int *array o array*
 
 /**
  *@brief  Obtiene elemento del array en el índice indicado

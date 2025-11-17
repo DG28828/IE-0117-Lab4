@@ -23,11 +23,22 @@ int array_element_add(int *array, int size, int element) {
 	return -1;
     }
     array[newsize-1] = element;
-    return 0;
-    
+    return 0; 
 }
 
-//int array_element_delete(int *array, int element);
+int array_element_delete(int *array, int size) {
+    if (array == NULL) {
+	printf("Error: puntero del arreglo es NULL \n");
+	return -1;
+    }
+    int newsize = size - 1;
+    array = (int *)realloc(array, newsize*sizeof(int));
+    if (array == NULL) {
+	printf("Error: no se pudo realocar memoria para el array. \n");
+	return -1;
+    }
+    return 0; 
+}
 
 int array_element_get(int *array, int size, int indice) {
     if (array == NULL) {

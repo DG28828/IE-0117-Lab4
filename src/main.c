@@ -27,6 +27,10 @@ int main() {
     int elemento6 = array_element_get(array, size, 6);
     printf("Elemento en i=%d: %d\n", 6,  elemento6);
 
+    // ELiminar elemento
+    array_element_delete(array, size);
+    size --;
+
     
 
 

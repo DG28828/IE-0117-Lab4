@@ -10,7 +10,7 @@ El repositorio se compone de la siguiente estructura de directorios:
 
 │   └── arreglos_dinamicos.h
 
-└── src
+├── src
 
 │   ├── arreglos_dinamicos.c
     
@@ -18,7 +18,7 @@ El repositorio se compone de la siguiente estructura de directorios:
     
 ├── Makefile
 
-├── README.md
+└── README.md
 
 La carpeta **src/** contiene el código compilable, mientras que la carpeta **include/** contiene los archivos de encabezados a incluir durante la compilación.
 

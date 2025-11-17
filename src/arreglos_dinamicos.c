@@ -11,32 +11,34 @@ int *array_create(int size) {
     return array;
 }
 
-int array_element_add(int *array, int size, int element) {
-    if (array == NULL) {
+int array_element_add(int **array, int size, int element) {
+    if (array == NULL || *array == NULL) {
 	printf("Error: puntero del arreglo es NULL \n");
 	return -1;
     }
     int newsize = size + 1;
-    array = (int *)realloc(array, newsize*sizeof(int));
-    if (array == NULL) {
+    int *temp_array = (int *)realloc(*array, newsize*sizeof(int));
+    if (temp_array == NULL) {
 	printf("Error: no se pudo realocar memoria para el array. \n");
 	return -1;
     }
-    array[newsize-1] = element;
+    *array = temp_array;
+    temp_array[newsize-1] = element;
     return 0; 
 }
 
-int array_element_delete(int *array, int size) {
+int array_element_delete(int **array, int size) {
     if (array == NULL) {
 	printf("Error: puntero del arreglo es NULL \n");
 	return -1;
     }
     int newsize = size - 1;
-    array = (int *)realloc(array, newsize*sizeof(int));
-    if (array == NULL) {
+    int *temp_array = (int *)realloc(*array, newsize*sizeof(int));
+    if (temp_array == NULL) {
 	printf("Error: no se pudo realocar memoria para el array. \n");
 	return -1;
     }
+    *array = temp_array;
     return 0; 
 }
 
@@ -54,7 +56,12 @@ int array_element_get(int *array, int size, int indice) {
     return valor;
 }
 
-void array_print(int *array, int size) {
+int array_print(int *array, int size) {
+  if (array == NULL) {
+	printf("Error: puntero del arreglo es NULL \n");
+	return -1;
+  }
+  
   //Declaraciones
   int * ptr_pos; //Puntero de posicion dentro de matriz
   int array_i; //Contenido al que apunta ptr_pos
@@ -66,4 +73,6 @@ void array_print(int *array, int size) {
     printf("%4d ", array_i);
   }
   printf("\n");
+  
+  return 0;
 }

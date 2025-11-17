@@ -12,9 +12,9 @@ El repositorio se compone de la siguiente estructura de directorios:
 
 └── src
 
-    ├── arreglos_dinamicos.c
+│   ├── arreglos_dinamicos.c
     
-    └── main.c
+│   └── main.c
     
 ├── Makefile
 

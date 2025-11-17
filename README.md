@@ -7,11 +7,17 @@ El presente repositorio contiene el código fuente para compilar el programa sol
 El repositorio se compone de la siguiente estructura de directorios:
 
 ├── include
+
 │   └── arreglos_dinamicos.h
+
 └── src
+
     ├── arreglos_dinamicos.c
+    
     └── main.c
+    
 ├── Makefile
+
 ├── README.md
 
 La carpeta **src/** contiene el código compilable, mientras que la carpeta **include/** contiene los archivos de encabezados a incluir durante la compilación.

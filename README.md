@@ -29,9 +29,9 @@ La forma de compilar es por medio del programa _make_ que procesa el archivo **M
 
 El archivo **Makefile** contiene las instrucciones de compilación, ejecución y verificación de errores. Las instrucciones brindadas son:
 
-- **make**: compila en un archivo resultante **main**.
-- **make run**: compila y ejecuta el archivo **main**.
-- **make clean**: borra los archivos .o resultantes de la compilación y el archivo compilado **main**.
-- **make Valgrind**: realiza un análisis en búsqueda de mal manejo de memoria.
+- **$make**: compila en un archivo resultante **main**.
+- **$make run**: compila y ejecuta el archivo **main**.
+- **$make clean**: borra los archivos .o resultantes de la compilación y el archivo compilado **main**.
+- **$make valgrind**: realiza un análisis en búsqueda de mal manejo de memoria.
 
-En caso de correr únicamente **make**, es posible ejecutar el archivo resultante con **./main**.
+En caso de correr únicamente **$make**, es posible ejecutar el archivo resultante con **$./main**.

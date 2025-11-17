@@ -23,10 +23,10 @@ int main() {
 
     // Agregar elementos
     printf("\nSe agregan elementos 18 y 24: \n");
-    array_element_add(array, size, 18);
+    array_element_add(&array, size, 18);
     size ++;
 
-    array_element_add(array, size, 24);
+    array_element_add(&array, size, 24);
     size ++;
 
     // Imprimir
@@ -39,7 +39,7 @@ int main() {
 
     // ELiminar elemento
     printf("\nSe elimina el último elemento\n");
-    array_element_delete(array, size);
+    array_element_delete(&array, size);
     size --;
 
     // Imprimir

@@ -54,4 +54,16 @@ int array_element_get(int *array, int size, int indice) {
     return valor;
 }
 
-//void array_print(int *array);
+void array_print(int *array, int size) {
+  //Declaraciones
+  int * ptr_pos; //Puntero de posicion dentro de matriz
+  int array_i; //Contenido al que apunta ptr_pos
+
+  //Imprimir array
+  for (int i = 0; i < size; i++) {
+    ptr_pos = array + i;
+    array_i = *ptr_pos;
+    printf("%4d ", array_i);
+  }
+  printf("\n");
+}

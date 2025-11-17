@@ -73,7 +73,7 @@ int array_element_get(int *array, int size, int indice);  //Pregunta int *array 
  *    - Imprime el array en el standard output
  *@retval -1 Error: `array == NULL`
  */
-void array_print(int *array);  //Pregunta int *array o array*
+void array_print(int *array, int size);  //Pregunta int *array o array*
 
 
 #endif

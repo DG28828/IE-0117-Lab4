@@ -13,11 +13,28 @@ int main() {
     }
     
     // Extraer elemento de indice indicado
-    int indice = 0;
-    int elemento = array_element_get(array, size, indice);
-    printf("Elemento en i=%d: %d\n", indice,  elemento);
+    int elemento0 = array_element_get(array, size, 0);
+    printf("Elemento en i=%d: %d\n", 0,  elemento0);
 
-    // Liberara memoria
+    // Agregar elementos
+    array_element_add(array, size, 18);
+    size ++;
+
+    array_element_add(array, size, 24);
+    size ++;
+
+    // Extraer elemento de indice indicado
+    int elemento6 = array_element_get(array, size, 6);
+    printf("Elemento en i=%d: %d\n", 6,  elemento6);
+
+    
+
+
+    
+
+    
+
+    // Liberar memoria
     free(array);
     array = NULL;
     

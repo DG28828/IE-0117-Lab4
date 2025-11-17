@@ -11,7 +11,21 @@ int *array_create(int size) {
     return array;
 }
 
-//int array_element_add(int *array, int element);
+int array_element_add(int *array, int size, int element) {
+    if (array == NULL) {
+	printf("Error: puntero del arreglo es NULL \n");
+	return -1;
+    }
+    int newsize = size + 1;
+    array = (int *)realloc(array, newsize*sizeof(int));
+    if (array == NULL) {
+	printf("Error: no se pudo realocar memoria para el array. \n");
+	return -1;
+    }
+    array[newsize-1] = element;
+    return 0;
+    
+}
 
 //int array_element_delete(int *array, int element);
 

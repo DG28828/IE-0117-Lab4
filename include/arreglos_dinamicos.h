@@ -31,28 +31,31 @@ int *array_create(int size);  //Pregunta int* array o array*
  *@brief Agregar elemento al array (al final)
  *
  *@param array Puntero del array.
+ *@param size Tamaño del arreglo
  *@param element Elemento a agregar (int)
  *
  *@retval 0 Operación exitosa.
  *@retval -1 Error: `array == NULL` o falta de memoria (OOM) al aumentar el tamaño del array
  */
-int array_element_add(int *array, int element);  //Pregunta int *array o array*
+int array_element_add(int *array, int size, int element);  //Pregunta int *array o array*
     
 /**
  *@brief  Elimina elemento del array (el ultimo)
  *
  *@param array Puntero del array.
+ *@param size Tamaño del arreglo
  *@param element Elemento a eliminar (int)
   *
  *@retval 0 Operación exitosa.
  *@retval -1 Error: `array == NULL`
  */
-int array_element_delete(int *array, int element);  //Pregunta int *array o array*
+int array_element_delete(int *array, int size, int element);  //Pregunta int *array o array*
 
 /**
  *@brief  Obtiene elemento del array en el índice indicado
  *
  *@param array Puntero del array.
+ *@param size Tamaño del arreglo
  *@param indice Índice del elemento a extraer (int)
  *
  *@return 
@@ -65,7 +68,8 @@ int array_element_get(int *array, int size, int indice);  //Pregunta int *array 
 /**
  *@brief 
  *
- *@param 
+ *@param array Puntero del array
+ *
  *@return
  *    - Imprime el array en el standard output
  *@retval -1 Error: `array == NULL`

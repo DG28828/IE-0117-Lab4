@@ -5,6 +5,14 @@
 int main() {
     printf("\n #####  Arreglos dinámicos #### \n \n");
 
+    /** -------------------------------------------------
+     * Ejemplo de uso correcto de las funciones
+     * -------------------------------------------------
+     */ 
+
+    
+    printf("\n #####  Ejemplo de uso correcto #### \n \n");
+    
     // Crear arreglo
     printf("Se crea un arreglo son 5 elementos \n");
     int size = 5;
@@ -46,7 +54,26 @@ int main() {
     printf("Arreglo: ");
     array_print(array, size);
 
-    // Liberar memoria
+    /** -------------------------------------------------
+     * Ejemplo de uso incorrecto de las funciones
+     * -------------------------------------------------
+     */
+    
+    printf("\n #####  Ejemplo de uso incorrecto #### \n");
+
+    printf("\nPuntero invalido (NULL):\n");
+    int Error1 = array_print(NULL, size);
+    printf("Codigo de error: %d\n", Error1);
+
+    printf("\nÍndice fuera de rango\n");
+    int Error2 = array_element_get(array, size, 7);
+    printf("Codigo de error: %d\n", Error2);
+
+    
+    /** -------------------------------------------------
+     * Liberar memoria
+     * -------------------------------------------------
+     */
     free(array);
     array = NULL;
     
